@@ -1,3 +1,7 @@
+<script setup>
+import OfferItem from "../components/OfferItem.vue";
+</script>
+
 <template>
     <!-- there navbar -->
 
@@ -6,9 +10,18 @@
         <button>dowiedz się więcej</button>
     </div>
 
+    <!-- TODO: 
+        - zmienić obraz w section 2:
+            - zeby był lepszej jakości
+            - czarno biały a nie kolorowy
+            - lekko go też zmniejszyc
+    -->
+
     <div class="sec2">
-        <img src="../assets/img/home-human1.png" alt="" />
-        <div>
+        <div class="sec2img">
+            <!-- <img src="../assets/img/home-human1.png" alt="" /> -->
+        </div>
+        <div class="sec2-text">
             <h3>Czym się zajmujemy?</h3>
             <p>
                 Już od ponad 10 lat realizujemy i wdrażamy autorskie systemy
@@ -20,11 +33,40 @@
     </div>
 
     <!-- tutaj komponenty z tego co robimy -->
-    <div class="sec3"></div>
+    <div class="sec3">
+        <OfferItem>
+            <template v-slot:header> System CMR </template>
+            <p>
+                Wsparcie sprzedaży, ofertowanie, obsługa zamówień. Zarządzanie
+                projektami i pracą działu handlowego.
+            </p>
+        </OfferItem>
+        <OfferItem>
+            <template v-slot:header>Platforma B2B</template>
+            <p>Wsparcie sprzedaży hurtowej i obsługa zamówień</p>
+        </OfferItem>
+        <OfferItem>
+            <template v-slot:header>Oprogramowanie na zamówienie</template>
+            <p>
+                Dedykowane oprogramowanie dla dużych i średnich firm.
+            </p></OfferItem
+        >
+        <OfferItem
+            ><template v-slot:header>Rozwiązania dla ubezpieczeń</template>
+            <p>Systemy do kalkulacji, sprzedaży oraz obsługi ubezpieczeń.</p>
+        </OfferItem>
+        <OfferItem>
+            <template v-slot:header>Usługi powdrożeniowe</template>
+            <p>Wsparcie i serwis. Rozwój oprogramowania.</p></OfferItem
+        >
+    </div>
 
     <div class="sec4">
-        <img src="../assets/img/home-human3.png" alt="" />
-        <div>
+        <div class="sec4img">
+            <img src="../assets/img/home-human3.png" alt="" />
+        </div>
+
+        <div class="sec4-text">
             <h3>Dlaczego Masterdev?</h3>
             <p>
                 Na rynku jesteśmy od 2010 roku i od samego początku skupiliśmy
@@ -101,28 +143,75 @@
 
 .sec2 {
     display: flex;
-    background-color: var(--primary-color);
     width: 100%;
+    background-color: var(--primary-color);
+    height: 80vh;
 }
 
-.sec2 img {
+.sec2img {
     width: 50vw;
+    background-image: url("../assets/img/home-human1.png");
+    background-size: cover;
+    background-position: center;
+}
+.sec2-text {
+    background-color: var(--primary-color);
+    width: 50vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .sec2 h3 {
     font-family: var(--font-header);
     font-weight: var(--font-weight-2);
-    font-size: 6vw;
-    line-height: 8vw;
-    display: flex;
-    align-items: center;
+    font-size: 2.7vw;
+
     text-align: center;
     letter-spacing: 0.055em;
 
     color: var(--secondary-color);
 }
 
+.sec2 p {
+    font-family: var(--font-text);
+    font-weight: var(--font-weight-text);
+    color: var(--secondary-color);
+    letter-spacing: 0.055em;
+
+    text-align: justify;
+
+    width: 60%;
+}
+
 .sec3 {
-    height: 50vh;
+    padding: 5vw 0 13vw 0;
+    background-color: var(--primary-color);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw 20px;
+
+    flex-wrap: wrap;
+}
+
+.sec4 {
+    display: flex;
+    flex-direction: row;
+}
+.sec4img {
+}
+
+.sec4-text {
+}
+
+.sec4img,
+.sec4-text {
+    width: 50vw;
 }
 </style>
