@@ -39,14 +39,18 @@
                 indywidualnie do Państwa potrzeb, nawet tych najbardziej
                 unikatowych!
             </p>
-            <p>
-                Naszym wiodącym modułem platformy ERPONE jest:
-                <ul>
-                    <li><b>ERPONE CRM </b>-moduł do zarządzania relacjami z Klientami, wsparcia sprzedaży, ofertowania, obsługi zamówień... </li>
-                    <li><b>ERPONE B2B</b> - moduł platformy wsparcia sprzedaży hurtowej, wymiany informacji, rozliczeń...</li>
-                </ul>
-                 
-            </p>
+            <p>Naszym wiodącym modułem platformy ERPONE jest:</p>
+            <ul>
+                <li>
+                    <b>ERPONE CRM </b>-moduł do zarządzania relacjami z
+                    Klientami, wsparcia sprzedaży, ofertowania, obsługi
+                    zamówień...
+                </li>
+                <li>
+                    <b>ERPONE B2B</b> - moduł platformy wsparcia sprzedaży
+                    hurtowej, wymiany informacji, rozliczeń...
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -73,32 +77,31 @@
     width: 80vw;
 
     text-align: center;
-    font-family: var(--font-family-header);
-    font-weight: 600;
+    font-family: var(--font-header);
+    font-weight: var(--font-weight-1);
     font-size: 5vw;
 
-    color: #364263;
+    color: var(--primary-color);
 }
 
-.sec1 button{
-     background: #364263;
-     padding: 15px 40px;
+.sec1 button {
+    background-color: var(--primary-color);
+    padding: 15px 40px;
 
-     border-radius: 23px;
-     border: none;
+    border-radius: 23px;
+    border: none;
 
+    font-family: var(--font-header);
+    font-weight: var(--font-weight-1);
+    font-size: 1vw;
+    letter-spacing: 0.8px;
 
-     font-family: var(--font-family-header);
-     font-weight: 600;
-     font-size: 1vw;
-     letter-spacing: 0.8px;
-
-     color: #E4FAFF;
+    color: var(--secondary-color);
 }
 
 .sec2 {
     display: flex;
-    background-color: #364263;
+    background-color: var(--primary-color);
     width: 100%;
 }
 
@@ -106,17 +109,17 @@
     width: 50vw;
 }
 
-.sec2 h3{
-     font-family: var(--font-family-header);
-     font-weight: 700;
-     font-size: 6vw;
-     line-height: 8vw;
-     display: flex;
-     align-items: center;
-     text-align: center;
-     letter-spacing: 0.055em;
+.sec2 h3 {
+    font-family: var(--font-header);
+    font-weight: var(--font-weight-2);
+    font-size: 6vw;
+    line-height: 8vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.055em;
 
-     color: #E4FAFF;
+    color: var(--secondary-color);
 }
 
 .sec3 {
