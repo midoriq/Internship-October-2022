@@ -12,7 +12,7 @@
 
     padding: 0 3vw;
     height: 15vw;
-    width: 27%;
+    width: 400px;
     display: flex;
     flex-direction: column;
 

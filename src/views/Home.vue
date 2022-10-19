@@ -68,33 +68,37 @@ import OfferItem from "../components/OfferItem.vue";
 
         <div class="sec4-text">
             <h3>Dlaczego Masterdev?</h3>
-            <p>
-                Na rynku jesteśmy od 2010 roku i od samego początku skupiliśmy
-                się na tworzeniu zaawansowanych rozwiązań informatycznych
-                realizowanych na zamówienie Klienta.
-            </p>
-            <p>
-                Na bazie wielu lat doświadczeń przy tworzeniu informatycznych
-                rozwiązań wsparcia sprzedaży i zarządzania relacjami z klientami
-                oraz doświadczeń naszych klientów stworzyliśmy unikatową
-                platformę ERPONE. Jest to elastyczny System, który dostosowujemy
-                indywidualnie do Państwa potrzeb, nawet tych najbardziej
-                unikatowych!
-            </p>
-            <p>Naszym wiodącym modułem platformy ERPONE jest:</p>
-            <ul>
-                <li>
-                    <b>ERPONE CRM </b>-moduł do zarządzania relacjami z
-                    Klientami, wsparcia sprzedaży, ofertowania, obsługi
-                    zamówień...
-                </li>
-                <li>
-                    <b>ERPONE B2B</b> - moduł platformy wsparcia sprzedaży
-                    hurtowej, wymiany informacji, rozliczeń...
-                </li>
-            </ul>
+            <div class="sec4-content">
+                <p>
+                    Na rynku jesteśmy od 2010 roku i od samego początku
+                    skupiliśmy się na tworzeniu zaawansowanych rozwiązań
+                    informatycznych realizowanych na zamówienie Klienta.
+                </p>
+                <p>
+                    Na bazie wielu lat doświadczeń przy tworzeniu
+                    informatycznych rozwiązań wsparcia sprzedaży i zarządzania
+                    relacjami z klientami oraz doświadczeń naszych klientów
+                    stworzyliśmy unikatową platformę ERPONE. Jest to elastyczny
+                    System, który dostosowujemy indywidualnie do Państwa
+                    potrzeb, nawet tych najbardziej unikatowych!
+                </p>
+                <p>Naszym wiodącym modułem platformy ERPONE jest:</p>
+                <ul>
+                    <li>
+                        <b>ERPONE CRM </b>-moduł do zarządzania relacjami z
+                        Klientami, wsparcia sprzedaży, ofertowania, obsługi
+                        zamówień...
+                    </li>
+                    <li>
+                        <b>ERPONE B2B</b> - moduł platformy wsparcia sprzedaży
+                        hurtowej, wymiany informacji, rozliczeń...
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+
+    <div class="marg"></div>
 </template>
 
 <style scoped>
@@ -171,7 +175,6 @@ import OfferItem from "../components/OfferItem.vue";
     font-size: 2.7vw;
 
     text-align: center;
-    letter-spacing: 0.055em;
 
     color: var(--secondary-color);
 }
@@ -188,7 +191,7 @@ import OfferItem from "../components/OfferItem.vue";
 }
 
 .sec3 {
-    padding: 5vw 0 13vw 0;
+    padding: 5vw 0 17vw 0;
     background-color: var(--primary-color);
 
     display: flex;
@@ -203,15 +206,58 @@ import OfferItem from "../components/OfferItem.vue";
 .sec4 {
     display: flex;
     flex-direction: row;
+
+    min-height: 70vh;
+    position: absolute;
 }
-.sec4img {
+.sec4img img {
+    max-width: 600px;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: -10%;
+    left: 60%;
 }
 
 .sec4-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    background-color: white;
+    position: absolute;
+    bottom: -20%;
+    left: 150%;
+    transform: translate(-50%, -50%);
 }
 
 .sec4img,
 .sec4-text {
     width: 50vw;
+}
+
+.sec4-text h3 {
+    font-family: var(--font-header);
+    font-weight: var(--font-weight-2);
+    color: var(--primary-color);
+
+    font-size: 2.7vw;
+
+    padding-top: 60px;
+}
+
+.sec4-content {
+    font-family: var(--font-text);
+    font-weight: var(--font-weight-text);
+    color: var(--primary-color);
+
+    width: 65%;
+    text-align: justify;
+}
+
+.marg {
+    height: 40vh;
 }
 </style>
