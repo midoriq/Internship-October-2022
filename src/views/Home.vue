@@ -1,5 +1,6 @@
 <script setup>
 import OfferItem from "../components/OfferItem.vue";
+import Slider from "../components/References.vue";
 </script>
 
 <template>
@@ -99,6 +100,16 @@ import OfferItem from "../components/OfferItem.vue";
     </div>
 
     <div class="marg"></div>
+    <div class="sec5">
+        <div class="sec5-content">
+            <h3>Referencje</h3>
+            <p>
+                Obok prezentujemy referencje jakie nasza firma otrzymała i
+                możemy się nimi publicznie pochwalić
+            </p>
+        </div>
+        <Slider class="referen"></Slider>
+    </div>
 </template>
 
 <style scoped>
@@ -258,6 +269,47 @@ import OfferItem from "../components/OfferItem.vue";
 }
 
 .marg {
-    height: 40vh;
+    min-height: 70vh;
+}
+
+.sec5 {
+    shape-outside: ellipse(70% 50%);
+    clip-path: ellipse(70% 50%);
+
+    min-height: 140vh;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.referen {
+    min-width: 60vw;
+    margin-right: 40px;
+}
+
+.sec5-content {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sec5-content h3 {
+    font-family: var(--font-header);
+    font-weight: var(--font-weight-2);
+    font-size: 50px;
+    color: var(--secondary-color);
+}
+
+.sec5-content p {
+    width: 50%;
+    font-family: var(--font-text);
+    font-weight: var(--font-weight-text);
+    font-size: 15px;
+    color: var(--secondary-color);
 }
 </style>
