@@ -1,6 +1,7 @@
 <script setup>
 import OfferItem from "../components/OfferItem.vue";
-import Slider from "../components/References.vue";
+import References from "../components/References.vue";
+import Partners from "../components/Partners.vue";
 </script>
 
 <template>
@@ -108,7 +109,12 @@ import Slider from "../components/References.vue";
                 możemy się nimi publicznie pochwalić
             </p>
         </div>
-        <Slider class="referen"></Slider>
+        <References class="referen"></References>
+    </div>
+
+    <div class="sec6">
+        <h3>Jesteśmy dumni z posiadania takich klientów</h3>
+        <Partners class="partn"></Partners>
     </div>
 </template>
 
@@ -237,7 +243,7 @@ import Slider from "../components/References.vue";
     align-items: center;
     gap: 30px;
 
-    background-color: white;
+    background-color: var(--background-color);
     position: absolute;
     bottom: -20%;
     left: 150%;
@@ -276,7 +282,7 @@ import Slider from "../components/References.vue";
     shape-outside: ellipse(70% 50%);
     clip-path: ellipse(70% 50%);
 
-    min-height: 140vh;
+    min-height: 110vh;
     background-color: var(--primary-color);
     display: flex;
     flex-direction: row;
@@ -311,5 +317,27 @@ import Slider from "../components/References.vue";
     font-weight: var(--font-weight-text);
     font-size: 15px;
     color: var(--secondary-color);
+}
+
+.sec6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    min-height: 50vh;
+}
+
+.sec6 h3 {
+    font-family: var(--font-header);
+    font-weight: var(--font-weight-text);
+
+    text-align: center;
+    font-size: 35px;
+    width: 50%;
+}
+.partn {
+    width: 70vw;
 }
 </style>

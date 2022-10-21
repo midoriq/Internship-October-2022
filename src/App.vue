@@ -27,6 +27,11 @@ const currentView = computed(() => {
     <component :is="currentView" />
 </template>
 
+<style>
+body {
+    background-color: var(--background-color);
+}
+</style>
 <!-- <style scoped>
 header {
     line-height: 1.5;
