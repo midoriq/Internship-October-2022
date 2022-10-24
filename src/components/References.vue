@@ -52,6 +52,19 @@ export default {
                 image: "/public/references/ref9.gif",
             },
         ],
+        breakpoints: {
+            1000: {
+                visibleSlides: 4,
+                slideRatio: 1 / 3,
+            },
+            800: {
+                visibleSlides: 3,
+            },
+            600: {
+                visibleSlides: 2,
+                slideRatio: 1 / 1.5,
+            },
+        },
     }),
 };
 </script>
@@ -68,7 +81,7 @@ export default {
         :infinite="true"
         :autoplay="true"
         :bullets="false"
-        :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
+        :breakpoints="breakpoints"
     >
         <vueper-slide
             v-for="(slide, i) in slides"

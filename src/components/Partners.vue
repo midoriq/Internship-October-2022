@@ -87,12 +87,32 @@ export default {
                 image: "/public/partnerzy/veloce.png",
             },
         ],
+
+        breakpoints: {
+            1000: {
+                visibleSlides: 5,
+                slideRatio: 1 / 15,
+            },
+            800: {
+                visibleSlides: 4,
+                slideRatio: 1 / 13,
+            },
+            600: {
+                visibleSlides: 3,
+                slideRatio: 1 / 9,
+            },
+            // 400: {
+            //     visibleSlides: 2,
+            //     slideRatio: 1 / 4,
+            // },
+        },
     }),
 };
 </script>
 
 <template>
     <vueper-slides
+        :breakpoints="breakpoints"
         class="no-shadow"
         :visible-slides="6"
         slide-multiple
@@ -103,7 +123,6 @@ export default {
         :infinite="true"
         :autoplay="true"
         :bullets="false"
-        :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
     >
         <vueper-slide
             v-for="(slide, i) in slides"
