@@ -1,7 +1,7 @@
 :root {
     /* Fonts */
     --font-header: "Montserrat";
-    --font-header-2: "Montserrat";
+    --font-text: "Montserrat";
     --font-secondary: "Arial";
     --font-weight-1: 600;
     --font-weight-2: 700;
@@ -36,14 +36,11 @@
     margin: 0;
     position: relative;
     font-weight: normal;
+    letter-spacing: 0.055em;
 }
 
 body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: visible;
-}
-
-body::-webkit-scrollbar {
-    display: none;
 }
