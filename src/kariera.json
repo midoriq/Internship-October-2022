@@ -1,0 +1,26 @@
+{
+    "kariera": [
+        {
+            "id": "1",
+            "name": ".NET Developer",
+            "description": "Aktualnie szukamy C#, .NET Core, .NET Developera który dołączyłby do naszego Team'u rozwijającego systemy CRM/B2B/eCommerce dla naszych klientów. Jeśli posiadasz doświadczenie w projektowaniu oraz programowaniu aplikacji biznesowych, chcesz się rozwijać, mieć kontakt z klientem i mieć wpływ na tworzone rozwiązania to Zapraszamy :) ",
+            "technologies": ".NET Core, .NET, ASP.NET, SQL",
+            "projects": " Agile, daily meetings",
+            "mile-widziane": "JavaScript, TypeScript",
+            "contract": "Do ustalenia: B2B, umowa o pracę lub umowa o dzieło.",
+            "times": "Pełny etat.",
+            "tasks": "Projektowanie, programowanie, utrzymanie aplikacji webowych i mobilnych."
+        },
+        {
+            "id": "2",
+            "name": "Junior .NET Developer",
+            "description": "Nie posiadasz doświadczenia lub posiadasz niewielkie doświadczenie? A może jeszcze studiujesz? Chcesz poznać nasze technologie i dołączyć do Teamu MASTERDEV? Wyślij do nas CV. ",
+            "technologies": ".NET Core, .NET, ASP.NET, SQL",
+            "projects": " Agile, daily meetings",
+            "mile-widziane": "JavaScript, TypeScript",
+            "contract": "Do ustalenia: B2B, umowa o pracę lub umowa o dzieło.",
+            "times": "Pełny etat, staż, praktyka.",
+            "tasks": "Wsparcie w rozwoju systemów."
+        }
+    ]
+}

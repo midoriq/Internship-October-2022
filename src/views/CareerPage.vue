@@ -1,40 +1,30 @@
 <script>
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
-import Oferta from "../oferta.json";
+import Kariera from "../kariera.json";
 import { onUpdated } from "@vue/runtime-core";
 import { onMounted } from "vue";
 import { useRouter, useRoute } from "vue-router";
-
-// var id = route.params.id;
-
-// onMounted(() => {
-//     oferta();
-// });
-
-// onUpdated(() => {
-//     oferta();
-// });
 
 export default {
     components: { Footer, Navbar },
     data() {
         return {
-            offer: 0,
+            career: 0,
         };
     },
     methods: {
-        changeOffer: function () {
-            for (var i = 0; i < Oferta.oferta2.length; i++) {
-                if (Oferta.oferta2[i].id == this.$route.params.id) {
-                    console.log(this.offer);
-                    return (this.offer = Oferta.oferta2[i]);
+        changeCareer: function () {
+            for (var i = 0; i < Kariera.kariera.length; i++) {
+                if (Kariera.kariera[i].id == this.$route.params.id) {
+                    console.log(this.career);
+                    return (this.career = Kariera.kariera[i]);
                 }
             }
         },
     },
     mounted() {
-        this.changeOffer();
+        this.changeCareer();
     },
 };
 </script>
@@ -42,8 +32,7 @@ export default {
 <template>
     <Navbar class="nav"> </Navbar>
     <div class="content">
-        <h1>{{ offer.name }}</h1>
-        <div>{{ offer.content }}</div>
+        <h1>{{ career.name }}</h1>
     </div>
     <div class="sidebar">
         <h2>Nasze inne oferty</h2>
