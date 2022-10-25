@@ -19,11 +19,21 @@
             <div class="footer-list-box">
                 <h4>Linki</h4>
                 <ul class="footer-list">
-                    <li class="footer-list-item">Start</li>
-                    <li class="footer-list-item">Firma</li>
-                    <li class="footer-list-item">Oferta</li>
-                    <li class="footer-list-item">Kariera</li>
-                    <li class="footer-list-item">Kontakt</li>
+                    <li class="footer-list-item">
+                        <router-link to="/">Start</router-link>
+                    </li>
+                    <li class="footer-list-item">
+                        <router-link to="/firma">Firma</router-link>
+                    </li>
+                    <li class="footer-list-item">
+                        <router-link to="/oferta">Oferta</router-link>
+                    </li>
+                    <li class="footer-list-item">
+                        <router-link to="/kariera">Kariera</router-link>
+                    </li>
+                    <li class="footer-list-item">
+                        <router-link to="/kontakt">Kontakt</router-link>
+                    </li>
                 </ul>
             </div>
             <div class="footer-list-box">

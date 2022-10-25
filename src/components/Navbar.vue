@@ -2,15 +2,35 @@
     <nav id="navbar" class="navbar">
         <div class="navbar_inner">
             <a class="navbar-brand" href="#">
-                <img src="icon.png" alt="logo" />
+                <router-link to="/"
+                    ><img src="icon.png" alt="logo"
+                /></router-link>
             </a>
             <div class="navbar-collapse">
                 <ul class="navbar-nav">
-                    <li class="navbar-item"><a href="#">start</a></li>
-                    <li class="navbar-item"><a href="#">firma</a></li>
-                    <li class="navbar-item"><a href="#">oferta</a></li>
-                    <li class="navbar-item"><a href="#">kariera</a></li>
-                    <li class="navbar-item"><a href="#">kontakt</a></li>
+                    <li class="navbar-item">
+                        <a href="#"><router-link to="/">start</router-link></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#"
+                            ><router-link to="/firma">firma</router-link></a
+                        >
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#"
+                            ><router-link to="/oferta">oferta</router-link></a
+                        >
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#"
+                            ><router-link to="/kariera">kariera</router-link></a
+                        >
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#"
+                            ><router-link to="/kontakt">kontakt</router-link></a
+                        >
+                    </li>
                 </ul>
             </div>
             <a @click="navSwitch" class="icon">&#9776;</a>

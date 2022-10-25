@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "vue": "^3.2.38",
+    "vue-router": "^4.1.6",
     "vueperslides": "^3.4.2"
   },
   "devDependencies": {
