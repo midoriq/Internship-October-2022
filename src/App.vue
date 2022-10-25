@@ -2,6 +2,7 @@
 import { ref, computed } from "vue";
 import Home from "./views/Home.vue";
 import Offerts from "./views/Offerts.vue";
+import OfferPage from "./views/Career.vue";
 
 //import NotFound from './NotFound.vue'
 
@@ -24,7 +25,7 @@ const currentView = computed(() => {
 <template>
     <!-- <a href="#/">Home</a> | <a href="#/about">About</a> |
     <a href="#/non-existent-path">Broken Link</a>  -->
-    <component :is="Offerts" />
+    <component :is="OfferPage" />
 </template>
 
 <style>
