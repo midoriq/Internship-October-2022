@@ -93,7 +93,7 @@ export default {
         </div>
         <div class="others" v-if="others.length > 0">
             <h4>Pozostałe oferty pracy</h4>
-            <div v-for="other in others">
+            <div v-for="other in others" :key="other.id">
                 <router-link :to="other.id" class="otheritem">
                     <h5>{{ other.name }}</h5>
                     <p>{{ other.desc }}</p>
@@ -158,11 +158,6 @@ p {
 .content p {
     width: 81%;
 }
-
-/* .needs {
-    line-height: 44px;
-} */
-
 .needs p {
     margin-top: 25px;
 }
@@ -216,5 +211,79 @@ p {
     border-top: 1.5px solid var(--secondary-color);
     border-right: 1.5px solid var(--secondary-color);
     transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        gap: 20px;
+    }
+    .content {
+        width: 60%;
+    }
+    .otheritem {
+        padding: 30px 30px;
+    }
+    .others {
+        width: 24%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+        padding: 70px 100px;
+    }
+    .content {
+        width: 80%;
+    }
+    .content p {
+        width: 100%;
+    }
+    .others {
+        width: 100%;
+    }
+    .others h4 {
+        font-size: 20px;
+    }
+
+    .otheritem {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        width: 100%;
+    }
+    .otheritem {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main {
+        padding: 60px 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .others h4 {
+        text-align: center;
+    }
+    .otheritem {
+        width: 100%;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 31px;
+    }
 }
 </style>

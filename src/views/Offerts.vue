@@ -11,17 +11,26 @@ import OffersItem from "../components/OffersPageItem.vue";
     </div>
 
     <div class="main-content">
-        <OffersItem>
-            <template v-slot:image
-                ><img src="offer-icons/crm.png" alt=""
-            /></template>
-            <template v-slot:header>Test</template>
-            <template v-slot:text>probatekstu</template>
-        </OffersItem>
-        <OffersItem></OffersItem>
-        <OffersItem></OffersItem>
-        <OffersItem></OffersItem>
-        <OffersItem></OffersItem>
+        <router-link to="/oferta/crm">
+            <OffersItem>
+                <template v-slot:image
+                    ><img src="offer-icons/crm.png" alt=""
+                /></template>
+                <template v-slot:header>Test</template>
+                <template v-slot:text>probatekstu</template>
+            </OffersItem></router-link
+        >
+        <router-link to="/oferta/b2b"><OffersItem></OffersItem></router-link>
+
+        <router-link to="/oferta/oprogramowanie-na-zamowienie"
+            ><OffersItem></OffersItem
+        ></router-link>
+        <router-link to="/oferta/rozwiazania-dla-ubezpieczen"
+            ><OffersItem></OffersItem
+        ></router-link>
+        <router-link to="/oferta/uslugi-powdrozeniowe"
+            ><OffersItem></OffersItem
+        ></router-link>
     </div>
 
     <Footer class="foot"></Footer>
