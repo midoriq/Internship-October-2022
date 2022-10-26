@@ -1,5 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
-@import "./base.css";
+
+:root {
+    /* Fonts */
+    --font-header: "Montserrat";
+    --font-text: "Montserrat";
+    --font-secondary: "Arial";
+    --font-weight-1: 600;
+    --font-weight-2: 700;
+    --font-weight-text: 400;
+
+    /* Colors */
+    --primary-color: #364263;
+    --secondary-color: #e4faff;
+    --background-color: #f2fafc;
+    --additional-color: #34a2b9;
+    --additional-color-2: #a83435;
+}
+
+/* @media (prefers-color-scheme: dark) */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+    letter-spacing: 0.055em;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
 
 #app {
     margin: 0;
@@ -7,29 +41,3 @@
 
     font-weight: normal;
 }
-
-/* a,
-.green {
-    text-decoration: none;
-    color: hsla(160, 100%, 37%, 1);
-    transition: 0.4s;
-}
-
-@media (hover: hover) {
-    a:hover {
-        background-color: hsla(160, 100%, 37%, 0.2);
-    }
-}
-
-@media (min-width: 1024px) {
-    body {
-        display: flex;
-        place-items: center;
-    }
-
-    #app {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 0 2rem;
-    }
-} */
