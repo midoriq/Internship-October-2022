@@ -7,6 +7,7 @@ import Offerts from "./views/Offerts.vue";
 import OfferPage from "./views/OfferPage.vue";
 import CareerPage from "./views/CareerPage.vue";
 import AboutUs from "./views/O_nas.vue";
+import PageNotFound from "./views/PageNotFound.vue";
 
 import "./assets/main.css";
 
@@ -42,13 +43,20 @@ const router = createRouter({
             path: "/oferta/:id",
             name: "Oferta",
             component: OfferPage,
+            props: true,
         },
         {
             path: "/kariera/:id",
             name: "Kariera",
             component: CareerPage,
+            props: true,
         },
+        { path: "/:pathMatch(.*)*", component: PageNotFound },
     ],
+    scrollBehavior(to, from, savedPosition) {
+        // always scroll to top
+        return { top: 0 };
+    },
 });
 
 createApp(App).use(router).mount("#app");
