@@ -28,24 +28,28 @@ onUpdated(() => {
 
     <div class="main-content">
         <h2>Oferty pracy ({{ count }})</h2>
-        <CareerItem>
-            <template v-slot:header>.NET Developer</template>
-            <template v-slot:text
-                >Jeśli posiadasz doświadczenie w projektowaniu oraz
-                programowaniu aplikacji biznesowych, chcesz się rozwijać, mieć
-                kontakt z klientem i mieć wpływ na tworzone rozwiązania to
-                zapraszamy :)</template
-            >
-        </CareerItem>
-        <CareerItem>
-            <template v-slot:header>Junior .NET Developer</template>
-            <template v-slot:text
-                >Nie posiadasz doświadczenia lub posiadasz niewielkie
-                doświadczenie? A może jeszcze studiujesz? Chcesz poznać nasze
-                technologie i dołączyć do Teamu MASTERDEV? Wyślij do nas
-                CV.</template
-            >
-        </CareerItem>
+        <router-link to="/kariera/1">
+            <CareerItem>
+                <template v-slot:header>.NET Developer</template>
+                <template v-slot:text
+                    >Jeśli posiadasz doświadczenie w projektowaniu oraz
+                    programowaniu aplikacji biznesowych, chcesz się rozwijać,
+                    mieć kontakt z klientem i mieć wpływ na tworzone rozwiązania
+                    to zapraszamy :)</template
+                >
+            </CareerItem>
+        </router-link>
+        <router-link to="/kariera/2">
+            <CareerItem>
+                <template v-slot:header>Junior .NET Developer</template>
+                <template v-slot:text
+                    >Nie posiadasz doświadczenia lub posiadasz niewielkie
+                    doświadczenie? A może jeszcze studiujesz? Chcesz poznać
+                    nasze technologie i dołączyć do Teamu MASTERDEV? Wyślij do
+                    nas CV.</template
+                >
+            </CareerItem>
+        </router-link>
     </div>
 
     <Footer class="foot"></Footer>
@@ -80,6 +84,7 @@ h2 {
 
 .main-content {
     background-color: var(--secondary-color);
+    color: var(--primary-color);
 
     padding: 9vh 200px;
 

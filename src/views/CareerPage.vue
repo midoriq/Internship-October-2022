@@ -2,9 +2,6 @@
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
 import Kariera from "../kariera.json";
-import { onUpdated } from "@vue/runtime-core";
-import { onMounted } from "vue";
-import { useRouter, useRoute } from "vue-router";
 
 export default {
     components: { Footer, Navbar },
@@ -22,6 +19,7 @@ export default {
                     this.career = Kariera.kariera[i];
                 } else {
                     this.others.push({
+                        id: Kariera.kariera[i].id,
                         name: Kariera.kariera[i].name,
                         desc: Kariera.kariera[i].description,
                     });
@@ -31,6 +29,11 @@ export default {
     },
     mounted() {
         this.changeCareer();
+    },
+    watch: {
+        $route(to, from) {
+            document.location.reload();
+        },
     },
 };
 </script>
@@ -76,8 +79,10 @@ export default {
                 Zainteresowane osoby prosimy o wysłanie CV ze zdjęciem na adres
                 mailowy: rekrutacja at masterdev.pl lub o kontakt
                 telefoniczny.<br />
-                W tytule maila prosimy wpisać JUNIOR .NET DEVELOPER oraz swoje
-                IMIĘ i NAZWISKO np. JUNIOR .NET DEVELOPER JAN KOWALSKI
+                W tytule maila prosimy wpisać
+                <span class="upper">{{ career.name }}</span> oraz swoje IMIĘ i
+                NAZWISKO np. <span class="upper">{{ career.name }}</span> JAN
+                KOWALSKI
             </p>
             <p class="claus">
                 Prosimy o umieszczenie w CV klauzuli "Wyrażam zgodę na
@@ -88,9 +93,12 @@ export default {
         </div>
         <div class="others" v-if="others.length > 0">
             <h4>Pozostałe oferty pracy</h4>
-            <div class="otheritem" v-for="other in others">
-                <h5>{{ other.name }}</h5>
-                <p>{{ other.desc }}</p>
+            <div v-for="other in others">
+                <router-link :to="other.id" class="otheritem">
+                    <h5>{{ other.name }}</h5>
+                    <p>{{ other.desc }}</p>
+                    <span class="arrow-right"></span>
+                </router-link>
             </div>
         </div>
     </div>
@@ -138,6 +146,8 @@ p {
     align-items: flex-start;
     width: 65%;
     gap: 20px;
+
+    color: var(--primary-color);
 }
 
 .desc {
@@ -149,8 +159,12 @@ p {
     width: 81%;
 }
 
-.needs {
+/* .needs {
     line-height: 44px;
+} */
+
+.needs p {
+    margin-top: 25px;
 }
 .header2 {
     font-weight: var(--font-weight-1);
@@ -188,5 +202,19 @@ p {
 }
 .otheritem h5 {
     font-size: 16px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.arrow-right {
+    align-self: flex-end;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 1.5px solid var(--secondary-color);
+    border-right: 1.5px solid var(--secondary-color);
+    transform: rotate(45deg);
 }
 </style>

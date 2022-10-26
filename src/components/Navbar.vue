@@ -1,10 +1,12 @@
+<script setup>
+import logo from "../assets/icon.png";
+</script>
+
 <template>
     <nav id="navbar" class="navbar">
         <div class="navbar_inner">
             <a class="navbar-brand" href="#">
-                <router-link to="/"
-                    ><img src="icon.png" alt="logo"
-                /></router-link>
+                <router-link to="/"><img :src="logo" alt="logo" /></router-link>
             </a>
             <div class="navbar-collapse">
                 <ul class="navbar-nav">

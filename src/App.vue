@@ -12,4 +12,9 @@ import Footer from "./components/Footer.vue";
 body {
     background-color: var(--background-color);
 }
+a {
+    text-transform: none;
+    text-decoration: none;
+    color: inherit;
+}
 </style>
