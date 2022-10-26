@@ -6,6 +6,7 @@ import Career from "./views/Career.vue";
 import Offerts from "./views/Offerts.vue";
 import OfferPage from "./views/OfferPage.vue";
 import CareerPage from "./views/CareerPage.vue";
+import AboutUs from "./views/O_nas.vue";
 
 import "./assets/main.css";
 
@@ -25,7 +26,7 @@ const router = createRouter({
         {
             path: "/firma",
             name: "Firma",
-            component: Career,
+            component: AboutUs,
         },
         {
             path: "/kontakt",
