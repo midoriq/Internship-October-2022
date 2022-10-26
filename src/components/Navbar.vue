@@ -41,6 +41,12 @@ import logo from "../assets/icon.png";
 </template>
 
 <style scoped>
+ul li {
+    color: var(--primary-color);
+}
+.router-link-active {
+    color: var(--additional-color-2);
+}
 .navbar {
     width: 100vw;
     background: transparent;
@@ -81,7 +87,6 @@ import logo from "../assets/icon.png";
 .navbar-nav a {
     letter-spacing: 0.065em;
     text-decoration: none;
-    color: #000;
 }
 .navbar .icon {
     text-decoration: none;

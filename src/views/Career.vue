@@ -1,25 +1,3 @@
-<script setup>
-import Footer from "../components/Footer.vue";
-import Navbar from "../components/Navbar.vue";
-import CareerItem from "../components/CareerItem.vue";
-import { onUpdated } from "@vue/runtime-core";
-import { onMounted } from "vue";
-
-var count = 2;
-function updateCount() {
-    console.log(document.querySelectorAll(".item").length);
-    count = document.querySelectorAll(".item").length;
-}
-
-onMounted(() => {
-    updateCount();
-});
-
-onUpdated(() => {
-    updateCount();
-});
-</script>
-
 <template>
     <Navbar class="nav"> </Navbar>
     <div class="main-header">
@@ -54,6 +32,32 @@ onUpdated(() => {
 
     <Footer class="foot"></Footer>
 </template>
+
+<script>
+import Footer from "../components/Footer.vue";
+import Navbar from "../components/Navbar.vue";
+import CareerItem from "../components/CareerItem.vue";
+
+export default {
+    components: { Footer, Navbar, CareerItem },
+    data() {
+        return {
+            count: 0,
+        };
+    },
+    methods: {
+        updateCount() {
+            this.count = document.querySelectorAll(".item").length;
+        },
+    },
+    mounted() {
+        this.updateCount();
+    },
+    updated() {
+        this.updateCount();
+    },
+};
+</script>
 
 <style scoped>
 .nav {
