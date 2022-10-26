@@ -29,6 +29,10 @@
     letter-spacing: 0.055em;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;

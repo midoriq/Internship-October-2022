@@ -1,6 +1,13 @@
+<script setup>
+defineProps({
+    src: String,
+});
+</script>
+
 <template>
     <div class="item">
-        <slot name="image"><img src="offer-icons/crm.png" alt="" /></slot>
+        <!-- <slot name="image"><img src="offer-icons/crm.png" alt="" /></slot> -->
+        <img :src="'/offer-icons/' + src" alt="" />
 
         <h4><slot name="header">System ERPONE CRM</slot></h4>
 
@@ -25,7 +32,7 @@
     width: 280px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 20px 20px;
-    height: 330px;
+    height: 340px;
 
     display: flex;
     flex-direction: column;

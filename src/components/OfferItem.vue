@@ -1,6 +1,12 @@
+<script setup>
+defineProps({
+    src: String,
+});
+</script>
+
 <template>
     <div class="item-body">
-        <img class="item-img" src="/offer-icons/icon1.png" alt="" />
+        <img class="item-img" :src="'/offer-icons/' + src" alt="" />
         <div class="item">
             <h4 class="item-header"><slot name="header"></slot></h4>
             <p class="item-text"><slot></slot></p>
@@ -13,7 +19,9 @@
     /* border: 2.64706px solid rgba(39, 51, 82, 0.4);
     filter: drop-shadow(0px 2.64706px 5.29412px rgba(0, 0, 0, 0.25)); */
 
-    border: 2.64706px solid rgba(39, 51, 82, 0.4);
+    mix-blend-mode: hard-light;
+    border: 3px solid rgba(39, 51, 82, 0.4);
+    filter: drop-shadow(0px 2.64706px 5.29412px rgba(0, 0, 0, 0.25));
     height: 15vw;
     width: 26%;
     padding: 0 3vw;

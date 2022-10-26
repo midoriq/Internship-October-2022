@@ -12,25 +12,62 @@ import OffersItem from "../components/OffersPageItem.vue";
 
     <div class="main-content">
         <router-link to="/oferta/crm">
-            <OffersItem>
-                <template v-slot:image
-                    ><img src="offer-icons/crm.png" alt=""
-                /></template>
-                <template v-slot:header>Test</template>
-                <template v-slot:text>probatekstu</template>
+            <OffersItem src="crm.png">
+                <template v-slot:header>System ERPONE CRM</template>
+                <template v-slot:text
+                    >Platforma ERPONE pozwala na łatwe i szybkie generowanie
+                    ofert i zamówień według Państwa klientów. Dzięki
+                    architekturze naszej platformy jesteśmy w standardowym
+                    czasie wdrożenia spersonalizować każdy element Systemu pod
+                    Państwa potrzeby.</template
+                >
             </OffersItem></router-link
         >
-        <router-link to="/oferta/b2b"><OffersItem></OffersItem></router-link>
+        <router-link to="/oferta/b2b"
+            ><OffersItem src="b2b.png"
+                ><template v-slot:header>ERPONE - platforma B2B</template>
+                <template v-slot:text
+                    >Dzięki naszej platformie ERPONE tworzymy dedykowane
+                    rozwiązania B2B zgodnie z wymogami i specyfiką działalności
+                    Państwa firmy. Tak aby uprościć komunikację i transakcje
+                    biznesowe między stronami.</template
+                ></OffersItem
+            ></router-link
+        >
 
         <router-link to="/oferta/oprogramowanie-na-zamowienie"
-            ><OffersItem></OffersItem
-        ></router-link>
+            ><OffersItem src="store.png"
+                ><template v-slot:header>Oprogramowanie na zamówienie</template>
+                <template v-slot:text
+                    >Zajmujemy się projektowaniem i realizacją aplikacji i
+                    systemów dedykowanych.Nasi specjaliści są w stanie stworzyć
+                    takie rozwiązania, które pomogą osiągnąć większy zysk i
+                    zmniejszyć koszty operacyjne funkcjonowania firmy.</template
+                ></OffersItem
+            ></router-link
+        >
         <router-link to="/oferta/rozwiazania-dla-ubezpieczen"
-            ><OffersItem></OffersItem
-        ></router-link>
+            ><OffersItem src="life-insurance.png"
+                ><template v-slot:header>Rozwiązania dla ubezpieczeń</template>
+                <template v-slot:text
+                    >Posiadamy sporą wiedzę z zakresu ubezpieczeń oraz procesów
+                    zachodzących przy obsłudze ubezpieczeń z punktu widzenia
+                    brokera ubezpieczeniowego jak i multiagencji
+                    ubezpieczeniowej.</template
+                ></OffersItem
+            ></router-link
+        >
         <router-link to="/oferta/uslugi-powdrozeniowe"
-            ><OffersItem></OffersItem
-        ></router-link>
+            ><OffersItem src="customer-service.png"
+                ><template v-slot:header>Usługi powdrożeniowe</template>
+                <template v-slot:text
+                    >Każdy nasz system jest jak żywy organizm, który dostosowuje
+                    się swojego właściciela. Wraz z rozwojem Państwa firmy
+                    będziemy go modyfikować oraz usprawniać, tak aby nadążał za
+                    zmianami na rynku i u Państwa w firmie.</template
+                ></OffersItem
+            ></router-link
+        >
     </div>
 
     <Footer class="foot"></Footer>

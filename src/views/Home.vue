@@ -4,6 +4,15 @@ import References from "../components/References.vue";
 import Partners from "../components/Partners.vue";
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
+import { routerKey } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
+
+const router = useRouter();
+const route = useRoute();
+
+function goNext(link) {
+    router.replace({ path: "/oferta/" + link });
+}
 </script>
 
 <template>
@@ -11,10 +20,10 @@ import Navbar from "../components/Navbar.vue";
 
     <div class="sec1">
         <h1>Tworzymy oprogramowanie dla biznesu</h1>
-        <button>dowiedz się więcej</button>
+        <a href="#onas"><button>dowiedz się więcej</button></a>
     </div>
     <div class="sec2">
-        <div class="sec2img">
+        <div class="sec2img" id="onas">
             <!-- <img src="../assets/img/home-human1.png" alt="" /> -->
         </div>
         <div class="sec2-text">
@@ -30,28 +39,36 @@ import Navbar from "../components/Navbar.vue";
 
     <!-- tutaj komponenty z tego co robimy -->
     <div class="sec3">
-        <OfferItem>
+        <OfferItem @click="goNext('crm')" src="crm.png">
             <template v-slot:header> System CMR </template>
             <p>
                 Wsparcie sprzedaży, ofertowanie, obsługa zamówień. Zarządzanie
                 projektami i pracą działu handlowego.
             </p>
         </OfferItem>
-        <OfferItem>
+        <OfferItem @click="goNext('b2b')" src="b2b.png">
             <template v-slot:header>Platforma B2B</template>
             <p>Wsparcie sprzedaży hurtowej i obsługa zamówień</p>
         </OfferItem>
-        <OfferItem>
+        <OfferItem
+            @click="goNext('oprogramowanie-na-zamowienie')"
+            src="store.png"
+        >
             <template v-slot:header>Oprogramowanie na zamówienie</template>
             <p>
                 Dedykowane oprogramowanie dla dużych i średnich firm.
             </p></OfferItem
         >
         <OfferItem
+            @click="goNext('rozwiazania-dla-ubezpieczen')"
+            src="life-insurance.png"
             ><template v-slot:header>Rozwiązania dla ubezpieczeń</template>
             <p>Systemy do kalkulacji, sprzedaży oraz obsługi ubezpieczeń.</p>
         </OfferItem>
-        <OfferItem>
+        <OfferItem
+            @click="goNext('uslugi-powdrozeniowe')"
+            src="customer-service.png"
+        >
             <template v-slot:header>Usługi powdrożeniowe</template>
             <p>Wsparcie i serwis. Rozwój oprogramowania.</p></OfferItem
         >

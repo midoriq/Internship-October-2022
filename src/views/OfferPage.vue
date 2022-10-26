@@ -160,6 +160,7 @@ img {
 
 .otheritem {
     width: 100%;
+    height: 180px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 30px 40px;
@@ -168,6 +169,7 @@ img {
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
 }
 .others p {
@@ -215,6 +217,12 @@ img {
     font-weight: 600;
 }
 
+@media screen and (max-width: 1450px) {
+    .otheritem {
+        height: 200px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .main {
         gap: 20px;
@@ -239,7 +247,7 @@ img {
         padding: 70px 100px;
     }
     .content {
-        width: 80%;
+        width: 100%;
     }
     .content p {
         width: 100%;
@@ -262,7 +270,7 @@ img {
         gap: 30px 40px;
     }
     .item2 {
-        min-width: 40%;
+        width: 90%;
     }
 
     .otheritem {
