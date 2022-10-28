@@ -8,6 +8,7 @@ import OfferPage from "./views/OfferPage.vue";
 import CareerPage from "./views/CareerPage.vue";
 import AboutUs from "./views/O_nas.vue";
 import PageNotFound from "./views/PageNotFound.vue";
+import Contact from "./views/Contact.vue";
 
 import "./assets/main.css";
 
@@ -32,7 +33,7 @@ const router = createRouter({
         {
             path: "/kontakt",
             name: "Kontakt",
-            component: Career,
+            component: Contact,
         },
         {
             path: "/oferta",

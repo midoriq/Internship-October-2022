@@ -149,9 +149,9 @@ export default {
     methods: {
         navSwitch: function () {
             const navbar = document.querySelector(".navbar");
-            if (navbar.className === "navbar nav") {
+            if (navbar.className === "navbar") {
                 navbar.className += " responsive";
-            } else navbar.className = "navbar nav";
+            } else navbar.className = "navbar";
         },
     },
 };

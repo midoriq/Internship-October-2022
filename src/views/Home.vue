@@ -16,7 +16,7 @@ function goNext(link) {
 </script>
 
 <template>
-    <Navbar></Navbar>
+    <Navbar class="nav"></Navbar>
 
     <div class="sec1">
         <h1>Tworzymy oprogramowanie dla biznesu</h1>
@@ -134,6 +134,10 @@ function goNext(link) {
 </template>
 
 <style scoped>
+.nav {
+    position: relative;
+    background-color: #15879d;
+}
 .sec1 {
     background-image: url("../assets/img/data-tech3.jpg");
     background-size: cover;

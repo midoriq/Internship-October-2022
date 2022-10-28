@@ -107,6 +107,13 @@ h1 {
     gap: 100px 100px;
 }
 
+.item {
+    transition: 0.5s ease-in-out;
+}
+.item:hover {
+    background-color: var(--additional-color);
+}
+
 /* .foot {
     border: none;
 } */

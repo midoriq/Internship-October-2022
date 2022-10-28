@@ -37,7 +37,7 @@
                 </ul>
             </div>
             <div class="footer-list-box">
-                <p>Odwiedź nas na <a href="https://www.facebook.com/MasterdevPoland">F</a> | <a href="https://twitter.com/masterdevpl">T</a></p>
+                <p>Odwiedź nas na F | T</p>
                 <p>Polityka prywatności | Polityka cookies</p>
                 <p>© 2009-2022 MASTERDEV Wszystkie prawa zastrzeżone</p>
             </div>
@@ -57,14 +57,7 @@
     font-family: var(--font-header);
     color: var(--primary-color);
 }
-a{
-    transition: .5s ease-in-out;
-    text-decoration: none;
-    color: var(--primary-color);
-}
-a:hover{
-    color: var(--additional-color-2);
-}
+
 .footer_inner {
     width: 80%;
     display: flex;

@@ -116,4 +116,10 @@ h2 {
         font-size: 50px;
     }
 }
+.item {
+    transition: 0.5s ease-in-out;
+}
+.item:hover {
+    background-color: var(--additional-color);
+}
 </style>
