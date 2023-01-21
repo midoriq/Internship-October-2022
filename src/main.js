@@ -21,6 +21,11 @@ const router = createRouter({
             component: Home,
         },
         {
+            path: "/Praktyki-pazdziernik-2022/",
+            name: "Home",
+            component: Home,
+        },
+        {
             path: "/kariera",
             name: "Career",
             component: Career,
