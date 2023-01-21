@@ -1,16 +1,9 @@
-# projektpraktyki
+# Praktyki październik 2022
 
-This template should help get you started developing with Vue 3 in Vite.
+Projekt został wykonany na praktyki szkolne. Byłam odpowiedzialna za projekt graficzny oraz wykonanie strony wizytówki firmy. Jest ona napisana w całości w frameworku JavaScriptowym - Vue.Js. 
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Uruchamianie projektu
 
 ```sh
 npm install
