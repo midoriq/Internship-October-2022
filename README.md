@@ -1,9 +1,9 @@
-# Praktyki październik 2022
+# Internship october 2022
 
-Projekt został wykonany na praktyki szkolne. Byłam odpowiedzialna za projekt graficzny oraz wykonanie strony wizytówki firmy. Jest ona napisana w całości w frameworku JavaScriptowym - Vue.Js. 
-
-
-## Uruchamianie projektu
+The project was created for a school internship. I was responsible for designing the website and writing it. The website is written in JavaScript framework - Vue.Js. It has all the company information, what they offer, job offers, and contact. 
+You can see a graphic project in my portfolio: shorturl.at/fiCRX
+## Running the project
+If you want to open this project you need to have installed Node.Js. You can open it by using this commands.
 
 ```sh
 npm install
